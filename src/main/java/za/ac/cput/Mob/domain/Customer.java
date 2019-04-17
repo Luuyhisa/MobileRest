@@ -1,23 +1,15 @@
 package za.ac.cput.Mob.domain;
-
-import javafx.util.Builder;
-import java.util.Set;
-
-public class Customer {
+public class Customer  extends Person {
     private String custID,custName,custSur,custddress;
     private double account;
-
     public Customer() {
     }
-
-    //
     private Customer(Builder builder){
 
         this.custID = builder.custID;
         this.custName = builder.custName;
         this.custSur = builder.custSur;
         this.custddress = builder.custddress;
-
     }
     public String getCustID() {
         return custID;
@@ -38,14 +30,9 @@ public class Customer {
     public double getAccount() {
         return account;
     }
-/////
-
     public static class Builder {
-
         private String custID,custName,custSur,custddress;
         private double account;
-       // private Set<Course> courses;
-
         public Builder custID( String custID) {
             this.custID = custID;
             return this;
@@ -74,13 +61,6 @@ public class Customer {
                     '}';
         }
 
-
-// ///
-
-
-
-
     }
-
 
 }
