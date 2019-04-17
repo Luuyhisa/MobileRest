@@ -7,8 +7,6 @@ String workingShift;
         return workingShift;
     }
 
-    public void setWorkingShift(String workingShift) {
-        this.workingShift = workingShift;
-    }
+
 }
 

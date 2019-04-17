@@ -9,31 +9,8 @@ import static org.junit.Assert.*;
 public class CustomerTest {
     @Test
     public void getCustID() {
-        String cust="qwe123";
+        String cust="Lugisa";
         Customer  q= CusomerFactory.getCustomer(cust,cust,cust,cust);
 
         Assert.assertNotSame(q,cust);
-    }
-    @Test
-    public void getCustName() {
-
-    }
-
-    @Test
-    public void getCustSur() {
-
-    }
-
-    @Test
-    public void getCustddress() {
-    }
-
-    @Test
-    public void getAccount() {
-
-
-
-
-
-    }
-}
+    }}

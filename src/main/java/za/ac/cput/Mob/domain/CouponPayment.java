@@ -7,15 +7,11 @@ String strName,strCouponCode;
         return strName;
     }
 
-    public void setStrName(String strName) {
-        this.strName = strName;
-    }
+
 
     public String getStrCouponCode() {
         return strCouponCode;
     }
 
-    public void setStrCouponCode(String strCouponCode) {
-        this.strCouponCode = strCouponCode;
-    }
+
 }
