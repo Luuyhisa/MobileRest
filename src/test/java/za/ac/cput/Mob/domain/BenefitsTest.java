@@ -2,9 +2,6 @@ package za.ac.cput.Mob.domain;
 
 import org.junit.Assert;
 import org.junit.Test;
-import za.ac.cput.Mob.factory.CusomerFactory;
-
-import static org.junit.Assert.*;
 
 public class BenefitsTest {
 

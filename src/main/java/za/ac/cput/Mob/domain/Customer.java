@@ -1,4 +1,7 @@
 package za.ac.cput.Mob.domain;
+
+
+
 public class Customer  extends Person {
     private String custID,custName,custSur,custddress;
     private double account;
