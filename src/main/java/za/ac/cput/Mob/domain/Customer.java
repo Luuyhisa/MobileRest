@@ -63,7 +63,5 @@ public class Customer  extends Person {
                     ", account=" + account +
                     '}';
         }
-
     }
-
 }
