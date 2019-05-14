@@ -1,4 +1,11 @@
 package za.ac.cput.Mob.repository;
 
-public class CashPaymentRepository {
+import za.ac.cput.Mob.domain.CashPayment;
+
+import java.util.Set;
+
+public interface CashPaymentRepository extends IRepository<CashPayment, String>
+{
+        Set<CashPayment> getAll();
+
 }
