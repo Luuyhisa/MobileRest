@@ -5,7 +5,7 @@ import za.ac.cput.Mob.util.Misc;
 
 public class CustomerFactory {
 
-    public static Customer getCustomer(String custName,String custSur,String custddress) {
+    public static Customer buildCustomer(String custName,String custSur,String custddress) {
         return new Customer.Builder()
                 .custID(Misc.generateId())
                 .custddress(custddress)

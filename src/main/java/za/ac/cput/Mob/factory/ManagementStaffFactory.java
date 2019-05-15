@@ -5,7 +5,7 @@ import za.ac.cput.Mob.domain.ManagementStaff;
 public class ManagementStaffFactory {
 
 
-    public static ManagementStaff getCustomer(String manageTeam) {
+    public static ManagementStaff buildManagementStaff(String manageTeam) {
         return new ManagementStaff.Builder()
                 .manageTeam(manageTeam)
                 .build();

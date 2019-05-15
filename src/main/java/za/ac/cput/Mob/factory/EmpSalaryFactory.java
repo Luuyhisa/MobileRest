@@ -4,7 +4,7 @@ import za.ac.cput.Mob.domain.EmpSalary;
 
 public class EmpSalaryFactory {
 
-    public static EmpSalary getCustomer
+    public static EmpSalary buildEmpSalary
             (int intEH,int intHW,int intPH) {
         return new EmpSalary.Builder()
                 .intExtraHrs(intEH)

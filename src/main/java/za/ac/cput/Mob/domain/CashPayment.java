@@ -23,9 +23,7 @@ public class CashPayment extends Payment {
         public Builder copy(CashPayment cashPayment){
 
             this.cashBenefits = cashPayment.cashBenefits;
-         //   this.custName = cashPayment.custName;
-           // this.custSur = cashPayment.custSur;
-          //  this.custddress = cashPayment.custddress;
+
             return this;
         }
 

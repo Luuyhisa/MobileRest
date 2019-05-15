@@ -6,7 +6,7 @@ import java.util.Date;
 
 public class OrderFactory {
 
-    public static Order getCustomer(Date orderDate, int ordernumber) {
+    public static Order buildOrder(Date orderDate, int ordernumber) {
         return new Order.Builder()
                 .orderDate(orderDate).ordernumber(ordernumber)
                 .build();

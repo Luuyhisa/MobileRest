@@ -6,18 +6,19 @@ import za.ac.cput.Mob.repository.CashPaymentRepository;
 import java.util.HashSet;
 import java.util.Set;
 
-public class CashPaymentRepositoryImp/*/ implements CashPaymentRepository*/ {
+public class CashPaymentRepositoryImp
+         implements CashPaymentRepository {
 
-/*
     private static CashPaymentRepositoryImp repository = null;
     private Set<CashPayment> cashPayment;
 
-    private CustomerRepositoryImp() {
-        this.customer = new HashSet<>();
+    private CashPaymentRepositoryImp() {
+        this.cashPayment = new HashSet<>();
     }
 
-    public static CashPaymentRepository getRepository(){
-        if(repository == null) repository = new CashPaymentRepositoryImp();
+    public static CashPaymentRepositoryImp getRepository(){
+        if(repository == null) repository
+                = new CashPaymentRepositoryImp();
         return repository;
     }
 
@@ -31,7 +32,7 @@ public class CashPaymentRepositoryImp/*/ implements CashPaymentRepository*/ {
         return null;
     }
 
-    public Customer update(Customer customer) {
+    public CashPayment update(CashPayment cashPayment) {
         // find the student, update it and return the updated student
         return null;
     }
@@ -41,9 +42,9 @@ public class CashPaymentRepositoryImp/*/ implements CashPaymentRepository*/ {
 
     }
 
-    public Set<Customer> getAll(){
-        return this.customer;
+    public Set<CashPayment> getAll(){
+        return this.cashPayment;
     }
-*/
+
 
 }

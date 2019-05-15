@@ -5,7 +5,7 @@ import za.ac.cput.Mob.domain.Employee;
 public class EmployeeFactory {
 
 
-    public static Employee getCustomer(String employeeNumber) {
+    public static Employee buildEmployee(String employeeNumber) {
         return new Employee.Builder()
                 .employeeNumber(employeeNumber)
                 .build();

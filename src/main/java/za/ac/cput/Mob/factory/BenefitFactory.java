@@ -5,7 +5,7 @@ import za.ac.cput.Mob.domain.Benefits;
 
 public class BenefitFactory {
 
-    public static Benefits getBenefits(String buyingBenefits) {
+    public static Benefits buildBenefits(String buyingBenefits) {
         return new Benefits.Builder()
                 .buyingBenefits(buyingBenefits)
                 .build();

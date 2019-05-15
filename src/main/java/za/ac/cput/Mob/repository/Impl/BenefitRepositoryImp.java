@@ -1,14 +1,18 @@
 package za.ac.cput.Mob.repository.Impl;
 import za.ac.cput.Mob.domain.Benefits;
 import za.ac.cput.Mob.repository.BenefitRepository;
+
+import java.util.HashSet;
 import java.util.Set;
 public class BenefitRepositoryImp implements BenefitRepository {
     private static BenefitRepositoryImp repository = null;
     private Set<Benefits> benefits;
-
-
+    private BenefitRepositoryImp() {
+      this.benefits = new HashSet<>();
+    }
     public static BenefitRepositoryImp getRepository(){
-        if(repository == null) repository = new BenefitRepositoryImp();
+        if(repository == null) repository =
+                new BenefitRepositoryImp();
         return repository;}
     public Benefits create(Benefits benefits){
         this.benefits.add(benefits);

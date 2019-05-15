@@ -4,7 +4,7 @@ import za.ac.cput.Mob.domain.CContactDetails;
 
 public class ContactDetailsFactory {
 
-    public static CContactDetails  getCContactDetails(String ContactDetail){
+    public static CContactDetails  buildCContactDetails(String ContactDetail){
         return new CContactDetails.Builder()
                 .telNo(ContactDetail).build();
 
