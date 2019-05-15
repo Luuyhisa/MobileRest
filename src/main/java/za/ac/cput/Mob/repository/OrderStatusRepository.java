@@ -1,4 +1,10 @@
 package za.ac.cput.Mob.repository;
 
-public class OrderStatusRepository {
+import za.ac.cput.Mob.domain.OrderStatus;
+
+import java.util.Set;
+
+public interface OrderStatusRepository
+extends IRepository<OrderStatus,String>{
+    Set<OrderStatus> getAll();
 }

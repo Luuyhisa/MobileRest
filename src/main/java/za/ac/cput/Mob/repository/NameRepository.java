@@ -1,4 +1,10 @@
 package za.ac.cput.Mob.repository;
 
-public class NameRepository {
+import za.ac.cput.Mob.domain.Name;
+
+import java.util.Set;
+
+public interface NameRepository
+extends IRepository<Name,String>{
+    Set<Name> getAll();
 }
