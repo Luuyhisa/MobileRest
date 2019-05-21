@@ -10,7 +10,7 @@ public class BenefitFactoryTest {
     @Test
     public void getCustomer() {
         String cust="qwe123";
-        Benefits q= BenefitFactory.getBenefits(cust);
+        Benefits q= BenefitFactory.buildBenefits(cust);
 
         Assert.assertNotSame(q,cust);
     }

@@ -1,4 +1,10 @@
 package za.ac.cput.Mob.service;
 
-public class PersonService {
+import za.ac.cput.Mob.domain.Person;
+
+import java.util.Set;
+
+public interface PersonService extends IService<Person,String> {
+
+    Set<Person>getAll();
 }

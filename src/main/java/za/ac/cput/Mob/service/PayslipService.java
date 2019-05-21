@@ -1,4 +1,10 @@
 package za.ac.cput.Mob.service;
 
-public class PayslipService {
+import za.ac.cput.Mob.domain.Payslip;
+
+import java.util.Set;
+
+public interface PayslipService extends IService<Payslip,String> {
+
+    Set<Payslip> getAll();
 }

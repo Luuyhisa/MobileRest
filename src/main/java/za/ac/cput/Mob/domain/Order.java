@@ -25,18 +25,18 @@ public class Order  {
         public Date orderDate;
         public int ordernumber;
 
-        public Builder ordernumber( int ordernumber) {
-            this.ordernumber = ordernumber;
+        public Builder ordernumber( int intOrdernumber) {
+            this.ordernumber = intOrdernumber;
             return this;
         }
-        public Builder orderDate( Date orderDate) {
-            this.orderDate = orderDate;
+        public Builder orderDate( Date orderDatee) {
+            this.orderDate = orderDatee;
             return this;
         }
-        public Builder copy(Order order){
+        public Builder copy(Order orderr){
 
-            this.orderDate = order.orderDate;
-            this.ordernumber = order.ordernumber;
+            this.orderDate = orderr.orderDate;
+            this.ordernumber = orderr.ordernumber;
 
             return this;
         }
@@ -68,4 +68,5 @@ public class Order  {
     public int hashCode() {
         return Objects.hash(ordernumber);
     }
+
 }
