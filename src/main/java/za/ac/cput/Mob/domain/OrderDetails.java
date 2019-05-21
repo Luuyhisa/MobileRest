@@ -1,17 +1,13 @@
 package za.ac.cput.Mob.domain;
-
 import java.util.Objects;
-
 public class OrderDetails extends Order {
     int quantity;
     String taxStatus;
      public  OrderDetails(){}
-
     private OrderDetails(Builder builder){
 
         this.quantity = builder.quantity;
         this.taxStatus = builder.taxStatus;
-
     }
     public int getQuantity() {
         return quantity;
@@ -19,11 +15,9 @@ public class OrderDetails extends Order {
     public String getTaxStatus() {
         return taxStatus;
     }
-
     public static class Builder {
         int quantity;
         String taxStatus;
-
         public Builder quantity( int quantity) {
             this.quantity = quantity;
             return this;
@@ -55,7 +49,6 @@ public class OrderDetails extends Order {
                 ", ordernumber=" + ordernumber +
                 '}';
     }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -65,7 +58,6 @@ public class OrderDetails extends Order {
         return quantity == that.quantity &&
                 taxStatus.equals(that.taxStatus);
     }
-
     @Override
     public int hashCode() {
         return Objects.hash(super.hashCode(), quantity, taxStatus);

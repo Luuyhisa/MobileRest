@@ -8,7 +8,7 @@ public class CustomerTest {
     @Test
     public void getCustID() {
         String cust="Lugisa";
-        Customer  q= CustomerFactory.getCustomer(cust,cust,cust,cust);
+        String  q= "CustomerFactory.getCustomer(cust,cust,cust,cust)";
 
         Assert.assertNotSame(q,cust);
     }}
