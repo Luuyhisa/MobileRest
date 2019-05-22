@@ -1,5 +1,8 @@
 package za.ac.cput.Mob.service.Impl;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Service;
 import za.ac.cput.Mob.domain.OrderStatus;
 import za.ac.cput.Mob.repository.Impl.OrderStatusRepositoryImp;
 import za.ac.cput.Mob.repository.OrderStatusRepository;
@@ -7,9 +10,13 @@ import za.ac.cput.Mob.service.OrderStatusService;
 
 import java.util.HashSet;
 import java.util.Set;
+@Service("CustomerServiceImpl")
 
 public class OrderStatusServiceImp
 implements OrderStatusService {
+
+    @Autowired
+    @Qualifier("InMemory")
     private static OrderStatusServiceImp service = null;
     private OrderStatusRepository repository;
 

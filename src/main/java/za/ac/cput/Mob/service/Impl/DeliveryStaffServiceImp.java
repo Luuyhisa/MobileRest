@@ -1,5 +1,8 @@
 package za.ac.cput.Mob.service.Impl;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Service;
 import za.ac.cput.Mob.domain.DeliveryStaff;
 import za.ac.cput.Mob.repository.DeliveryStaffRepository;
 import za.ac.cput.Mob.repository.Impl.DeliveryStaffRepositoryImp;
@@ -7,9 +10,12 @@ import za.ac.cput.Mob.service.DeliveryStuffService;
 
 import java.util.HashSet;
 import java.util.Set;
-
+@Service("DeliveryStaffServiceImp")
 public class DeliveryStaffServiceImp
 implements DeliveryStuffService {
+
+    @Autowired
+    @Qualifier("InMemory")
     private static DeliveryStaffServiceImp service = null;
     private DeliveryStaffRepository repository;
 

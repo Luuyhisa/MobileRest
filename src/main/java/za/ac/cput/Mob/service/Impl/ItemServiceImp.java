@@ -1,13 +1,18 @@
 package za.ac.cput.Mob.service.Impl;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Service;
 import za.ac.cput.Mob.domain.Item;
 import za.ac.cput.Mob.repository.Impl.ItemRepositoryImp;
 import za.ac.cput.Mob.repository.ItemRepository;
 import za.ac.cput.Mob.service.ItemService;
 
 import java.util.Set;
-
+@Service("ItemServiceImp")
 public class ItemServiceImp implements ItemService {
+    @Autowired
+    @Qualifier("InMemory")
     private static ItemServiceImp service = null;
     private ItemRepository repository;
 

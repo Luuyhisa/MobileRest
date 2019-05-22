@@ -1,5 +1,8 @@
 package za.ac.cput.Mob.service.Impl;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Service;
 import za.ac.cput.Mob.domain.Inventory;
 import za.ac.cput.Mob.repository.Impl.InventoryRepositoryImp;
 import za.ac.cput.Mob.repository.InventoryRepository;
@@ -7,9 +10,12 @@ import za.ac.cput.Mob.service.InventoryService;
 
 import java.util.HashSet;
 import java.util.Set;
-
+@Service("InventoryServiceImp")
 public class InventoryServiceImp
 implements InventoryService {
+
+    @Autowired
+    @Qualifier("InMemory")
     private static InventoryServiceImp service = null;
     private InventoryRepository repository;
 

@@ -1,4 +1,7 @@
 package za.ac.cput.Mob.service.Impl;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Service;
 import za.ac.cput.Mob.domain.Login;
 import za.ac.cput.Mob.repository.Impl.LoginRepositoryImp;
 import za.ac.cput.Mob.repository.LoginRepository;
@@ -6,8 +9,11 @@ import za.ac.cput.Mob.service.LoginService;
 
 import java.util.HashSet;
 import java.util.Set;
+@Service("LoginServiceImp")
 
 public class LoginServiceImp implements LoginService {
+    @Autowired
+    @Qualifier("InMemory")
     private static LoginServiceImp service = null;
     private LoginRepository repository;
 

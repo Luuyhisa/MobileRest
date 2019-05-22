@@ -1,5 +1,8 @@
 package za.ac.cput.Mob.service.Impl;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Service;
 import za.ac.cput.Mob.domain.Payment;
 import za.ac.cput.Mob.repository.Impl.PaymentRepositoryImp;
 import za.ac.cput.Mob.repository.PaymentRepository;
@@ -7,9 +10,11 @@ import za.ac.cput.Mob.service.PaymentService;
 
 import java.util.HashSet;
 import java.util.Set;
-
+@Service("PaymentServiceImp")
 public class PaymentServiceImp
 implements PaymentService {
+    @Autowired
+    @Qualifier("InMemory")
     private static PaymentServiceImp service = null;
     private PaymentRepository repository;
 

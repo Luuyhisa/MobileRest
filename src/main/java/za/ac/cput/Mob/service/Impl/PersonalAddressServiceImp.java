@@ -1,5 +1,8 @@
 package za.ac.cput.Mob.service.Impl;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Service;
 import za.ac.cput.Mob.domain.PersonalAddress;
 import za.ac.cput.Mob.repository.Impl.PersonalAddressRepositoryImp;
 import za.ac.cput.Mob.repository.PersonalAddressRepository;
@@ -7,10 +10,12 @@ import za.ac.cput.Mob.service.PersonalAddressService;
 
 import java.util.HashSet;
 import java.util.Set;
+@Service("PersonalAddressServiceImp")
 
 public class PersonalAddressServiceImp
 implements PersonalAddressService {
-
+    @Autowired
+    @Qualifier("InMemory")
     private static PersonalAddressServiceImp service = null;
     private PersonalAddressRepository repository;
 

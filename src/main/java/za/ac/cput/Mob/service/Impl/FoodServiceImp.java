@@ -1,4 +1,7 @@
 package za.ac.cput.Mob.service.Impl;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Service;
 import za.ac.cput.Mob.domain.Food;
 import za.ac.cput.Mob.repository.FoodRepository;
 import za.ac.cput.Mob.repository.Impl.FoodRepositoryImp;
@@ -6,10 +9,11 @@ import za.ac.cput.Mob.service.FoodService;
 
 import java.util.HashSet;
 import java.util.Set;
-
+@Service("FoodServiceImp")
 public class FoodServiceImp
 implements FoodService {
-
+    @Autowired
+    @Qualifier("InMemory")
     private static FoodServiceImp service = null;
     private FoodRepository repository;
 

@@ -7,15 +7,15 @@ import za.ac.cput.Mob.domain.Customer;
 import za.ac.cput.Mob.service.CustomerService;
 
 import java.util.Set;
-
+@RestController
+@RequestMapping("/customer")
 public class CustomerController {
 
-    @RestController
-    @RequestMapping("/Customer")
 
-    public class StudentController {
-        @Autowired
-        @Qualifier("CustomerServiceImpl")
+
+
+    @Autowired
+   @Qualifier("CustomerServiceImp")
         private CustomerService service;
 
         @PostMapping("/create")
@@ -34,7 +34,6 @@ public class CustomerController {
         @ResponseBody
         public void delete(@PathVariable String id) {
             service.delete(id);
-
         }
 
         @GetMapping("/read/{id}")
@@ -49,5 +48,5 @@ public class CustomerController {
             return service.getAll();
         }
 
-    }
+
 }

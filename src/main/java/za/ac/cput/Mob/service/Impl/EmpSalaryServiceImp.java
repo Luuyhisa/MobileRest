@@ -1,13 +1,20 @@
 package za.ac.cput.Mob.service.Impl;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Service;
 import za.ac.cput.Mob.domain.EmpSalary;
 import za.ac.cput.Mob.repository.EmpSalaryRepository;
 import za.ac.cput.Mob.repository.Impl.EmpSalaryRepositoryImp;
 import za.ac.cput.Mob.service.EmpSalaryService;
 
 import java.util.Set;
+@Service("EmpSalaryServiceImp")
 
 public class  EmpSalaryServiceImp implements EmpSalaryService {
+
+    @Autowired
+    @Qualifier("InMemory")
         private static EmpSalaryServiceImp service = null;
         private EmpSalaryRepository repository;
 

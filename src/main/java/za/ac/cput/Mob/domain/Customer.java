@@ -1,8 +1,12 @@
 package za.ac.cput.Mob.domain;
 
 import java.util.Objects;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
 
+
+@EntityScan
 public class Customer  extends Person {
+
     private String custID,custName,custSur,custddress;
     private double account;
     public Customer() {
